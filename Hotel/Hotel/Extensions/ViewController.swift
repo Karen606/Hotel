@@ -26,7 +26,7 @@ extension UIViewController {
         titleLabel.textAlignment = .center
         titleLabel.sizeToFit()
         navigationItem.titleView = titleLabel
-        self.navigationController?.navigationBar.backgroundColor = .black
+//        self.navigationController?.navigationBar.backgroundColor = .white
     }
     
     @objc func clickedBack() {

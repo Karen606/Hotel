@@ -22,7 +22,7 @@ class MenuViewController: UIViewController {
     }
 
     @objc func clickedInfo() {
-        
+        self.pushViewController(HotelViewController.self)
     }
 
 }
