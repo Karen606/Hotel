@@ -131,10 +131,6 @@ class HotelViewController: UIViewController {
         servicesStackView.addArrangedSubview(servicesTextField)
     }
     
-    @IBAction func clickedAddPhoto(_ sender: UIButton) {
-        
-    }
-    
     @IBAction func clickedSave(_ sender: UIButton) {
         var services: [String] = []
         servicesStackView.arrangedSubviews.forEach { serviceTextField in

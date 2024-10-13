@@ -63,15 +63,72 @@ class CoreDataManager {
                 let results = try backgroundContext.fetch(fetchRequest)
                 if let hotel = results.first {
                     let hotelModel = HotelModel(photos: hotel.photo, name: hotel.name, brefInformation: hotel.brefInformation, rules: hotel.rules, services: hotel.services)
-                    completion(hotelModel, nil)
+                    DispatchQueue.main.async {
+                        completion(hotelModel, nil)
+                    }
                 } else {
-                    completion(nil, nil)
+                    DispatchQueue.main.async {
+                        completion(nil, nil)
+                    }
                 }
             } catch {
-                completion(nil, error)
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
             }
         }
     }
 
+    func saveRoom(roomModel: RoomModel, completion: @escaping (Error?) -> Void) {
+        let id = roomModel.id ?? UUID()
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Room> = Room.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
 
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                let room: Room
+
+                if let existingRoom = results.first {
+                    room = existingRoom
+                } else {
+                    room = Room(context: backgroundContext)
+                    room.id = id
+                }
+                room.photo = roomModel.photo
+                room.price = roomModel.price ?? 0
+                room.facilities = roomModel.facilities
+                try backgroundContext.save()
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
+    
+    func fetchRooms(completion: @escaping ([RoomModel], Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Room> = Room.fetchRequest()
+            
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                var roomsModel: [RoomModel] = []
+                for result in results {
+                    let roomModel = RoomModel(id: result.id, photo: result.photo, price: result.price, facilities: result.facilities)
+                    roomsModel.append(roomModel)
+                }
+                completion(roomsModel, nil)
+            } catch {
+                DispatchQueue.main.async {
+                    completion([], error)
+                }
+            }
+        }
+    }
 }

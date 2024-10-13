@@ -25,5 +25,15 @@ class MenuViewController: UIViewController {
         self.pushViewController(HotelViewController.self)
     }
 
+    @IBAction func clickedRooms(_ sender: UIButton) {
+        self.pushViewController(RoomsViewController.self)
+    }
+    
+    @IBAction func clickedBookRoom(_ sender: UIButton) {
+    }
+    @IBAction func clickedBooking(_ sender: UIButton) {
+    }
+    @IBAction func clickedSupport(_ sender: UIButton) {
+    }
 }
 

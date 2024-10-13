@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoomFormViewController" customModule="Hotel" customModuleProvider="target">
+            <connections>
+                <outlet property="facilitiesStackView" destination="ioC-0e-nbA" id="rmN-Fu-gfL"/>
+                <outlet property="facilitiesTextField" destination="ItR-gu-zSY" id="RMK-BP-vPc"/>
+                <outlet property="photoButton" destination="0jM-B8-gQx" id="bQZ-em-rMf"/>
+                <outlet property="priceTextField" destination="6XU-kU-4Dg" id="ahg-Ie-xGw"/>
+                <outlet property="scrollView" destination="ZBL-kM-Uy3" id="abx-ge-6iA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="titleLabels" destination="otw-0r-oOz" collectionClass="NSMutableArray" id="hdd-XZ-ULH"/>
+                <outletCollection property="titleLabels" destination="Dqj-5g-Y9S" collectionClass="NSMutableArray" id="jOj-3I-uFc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBL-kM-Uy3">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJu-1t-g2s">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="370"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-Rn-eMj" customClass="ShadowView" customModule="Hotel" customModuleProvider="target">
+                                    <rect key="frame" x="40" y="26" width="313" height="320"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ioC-0e-nbA">
+                                            <rect key="frame" x="8" y="195" width="297" height="26"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ItR-gu-zSY" customClass="BaseTextField" customModule="Hotel" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="297" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="ygf-e2-tqg"/>
+                                                    </constraints>
+                                                    <color key="textColor" name="grayTitle"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-V0-3zN">
+                                            <rect key="frame" x="146" y="240" width="21" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="21" id="9Qv-Hf-akc"/>
+                                                <constraint firstAttribute="height" constant="22" id="Opb-2y-zex"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="addSmall"/>
+                                            <connections>
+                                                <action selector="clickedAddButton:" destination="-1" eventType="touchUpInside" id="SD6-t9-s8D"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr8-TC-7Ud">
+                                            <rect key="frame" x="253" y="278" width="58" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="58" id="vhX-10-ETk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Save">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="clickedSaveButton:" destination="-1" eventType="touchUpInside" id="qjS-Du-uWT"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jM-B8-gQx">
+                                            <rect key="frame" x="8" y="14" width="297" height="113"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="113" id="6V6-K4-0Qm"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="imagePlaceholder"/>
+                                            <connections>
+                                                <action selector="choosePhoto:" destination="-1" eventType="touchUpInside" id="ag7-df-bRa"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Services and facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otw-0r-oOz">
+                                            <rect key="frame" x="7.9999999999999929" y="180.66666666666669" width="123.33333333333331" height="14.333333333333343"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" name="grayTitle"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6XU-kU-4Dg" customClass="PricesTextField" customModule="Hotel" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="149.66666666666666" width="156.66666666666666" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="8hL-K1-swH"/>
+                                            </constraints>
+                                            <color key="textColor" name="grayTitle"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price per night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-5g-Y9S">
+                                            <rect key="frame" x="8" y="135" width="78.333333333333329" height="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" name="grayTitle"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Dqj-5g-Y9S" firstAttribute="top" secondItem="0jM-B8-gQx" secondAttribute="bottom" constant="8" id="3gp-Fz-ga7"/>
+                                        <constraint firstItem="Dqj-5g-Y9S" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="9gp-uI-6lz"/>
+                                        <constraint firstItem="Cqb-V0-3zN" firstAttribute="centerX" secondItem="dXE-Rn-eMj" secondAttribute="centerX" id="JUv-OM-739"/>
+                                        <constraint firstItem="otw-0r-oOz" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="Ngr-JY-ZmW"/>
+                                        <constraint firstItem="Cqb-V0-3zN" firstAttribute="top" secondItem="ioC-0e-nbA" secondAttribute="bottom" constant="19" id="P7G-B2-bZ5"/>
+                                        <constraint firstAttribute="trailing" secondItem="dr8-TC-7Ud" secondAttribute="trailing" constant="2" id="Sf1-8l-uvu"/>
+                                        <constraint firstAttribute="bottom" secondItem="dr8-TC-7Ud" secondAttribute="bottom" constant="16" id="TAw-Dq-TzX"/>
+                                        <constraint firstItem="6XU-kU-4Dg" firstAttribute="top" secondItem="Dqj-5g-Y9S" secondAttribute="bottom" constant="0.66666666666665719" id="TCd-gQ-tqQ"/>
+                                        <constraint firstItem="0jM-B8-gQx" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="enC-TL-znl"/>
+                                        <constraint firstItem="dr8-TC-7Ud" firstAttribute="top" secondItem="Cqb-V0-3zN" secondAttribute="bottom" constant="16" id="hIz-c6-9ka"/>
+                                        <constraint firstItem="0jM-B8-gQx" firstAttribute="top" secondItem="dXE-Rn-eMj" secondAttribute="top" constant="14" id="iXS-Ld-Imy"/>
+                                        <constraint firstAttribute="trailing" secondItem="0jM-B8-gQx" secondAttribute="trailing" constant="8" id="njC-Uu-xyS"/>
+                                        <constraint firstItem="ioC-0e-nbA" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="rm6-Qb-Fww"/>
+                                        <constraint firstItem="6XU-kU-4Dg" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="ugS-Fc-LBa"/>
+                                        <constraint firstItem="6XU-kU-4Dg" firstAttribute="width" secondItem="dXE-Rn-eMj" secondAttribute="width" multiplier="0.5" id="w4C-pT-7LT"/>
+                                        <constraint firstItem="otw-0r-oOz" firstAttribute="top" secondItem="6XU-kU-4Dg" secondAttribute="bottom" constant="5" id="wMx-vc-j7y"/>
+                                        <constraint firstItem="ioC-0e-nbA" firstAttribute="top" secondItem="otw-0r-oOz" secondAttribute="bottom" id="wRc-zh-lma"/>
+                                        <constraint firstAttribute="trailing" secondItem="ioC-0e-nbA" secondAttribute="trailing" constant="8" id="wgu-2G-rpn"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="dXE-Rn-eMj" secondAttribute="trailing" constant="40" id="2Qx-dl-DKz"/>
+                                <constraint firstAttribute="bottom" secondItem="dXE-Rn-eMj" secondAttribute="bottom" constant="24" id="RNg-tJ-7xe"/>
+                                <constraint firstItem="dXE-Rn-eMj" firstAttribute="top" secondItem="JJu-1t-g2s" secondAttribute="top" constant="26" id="fCO-fa-f2s"/>
+                                <constraint firstItem="dXE-Rn-eMj" firstAttribute="leading" secondItem="JJu-1t-g2s" secondAttribute="leading" constant="40" id="fZl-2w-YeK"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="hhs-6a-icS" appends="YES" id="ayw-Xw-3vl"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="JJu-1t-g2s" firstAttribute="top" secondItem="ZBL-kM-Uy3" secondAttribute="top" id="7tI-Nv-Efv"/>
+                        <constraint firstItem="JJu-1t-g2s" firstAttribute="leading" secondItem="ZBL-kM-Uy3" secondAttribute="leading" id="G1D-FJ-4aK"/>
+                        <constraint firstAttribute="bottom" secondItem="JJu-1t-g2s" secondAttribute="bottom" constant="8" id="T18-qU-xff"/>
+                        <constraint firstAttribute="trailing" secondItem="JJu-1t-g2s" secondAttribute="trailing" id="fHp-oN-ggi"/>
+                        <constraint firstItem="JJu-1t-g2s" firstAttribute="centerX" secondItem="ZBL-kM-Uy3" secondAttribute="centerX" id="o7d-gh-Rm0"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZBL-kM-Uy3" secondAttribute="bottom" id="OuZ-Hb-CoM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZBL-kM-Uy3" secondAttribute="trailing" id="ZU4-0n-MuO"/>
+                <constraint firstItem="ZBL-kM-Uy3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tt5-oZ-o8r"/>
+                <constraint firstItem="ZBL-kM-Uy3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="z1B-aA-H8l"/>
+            </constraints>
+            <point key="canvasLocation" x="14.503816793893129" y="19.718309859154932"/>
+        </view>
+        <tapGestureRecognizer id="hhs-6a-icS">
+            <connections>
+                <action selector="handleTapGesture:" destination="-1" id="GTK-6F-nkT"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="addSmall" width="20.666666030883789" height="20.666666030883789"/>
+        <image name="imagePlaceholder" width="81.333335876464844" height="77"/>
+        <namedColor name="grayTitle">
+            <color red="0.62699997425079346" green="0.62699997425079346" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
