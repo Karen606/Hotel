@@ -10,6 +10,8 @@
 		0DE74304ACE82CB10AFEA4F2 /* Pods_Hotel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D36D7477B5E93D22244F8B /* Pods_Hotel.framework */; };
 		6B719C672CBC7FB800F10E39 /* RoomFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B719C662CBC7FB800F10E39 /* RoomFormViewModel.swift */; };
 		6B719C692CBC80D500F10E39 /* PriceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B719C682CBC80D500F10E39 /* PriceTextField.swift */; };
+		6B719C6D2CBC8C2000F10E39 /* RoomsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B719C6C2CBC8C2000F10E39 /* RoomsListViewController.xib */; };
+		6B719C6E2CBC8C2000F10E39 /* RoomsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B719C6B2CBC8C2000F10E39 /* RoomsListViewController.swift */; };
 		6B8C53E92CB9BEC4002557E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C53E82CB9BEC4002557E3 /* AppDelegate.swift */; };
 		6B8C53EB2CB9BEC4002557E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C53EA2CB9BEC4002557E3 /* SceneDelegate.swift */; };
 		6B8C53ED2CB9BEC4002557E3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8C53EC2CB9BEC4002557E3 /* MenuViewController.swift */; };
@@ -45,11 +47,20 @@
 		6B98898A2CBC662F001CDCE0 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9889892CBC662F001CDCE0 /* Double.swift */; };
 		6B98898F2CBC69FA001CDCE0 /* RoomFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98898D2CBC69FA001CDCE0 /* RoomFormViewController.swift */; };
 		6B9889902CBC69FA001CDCE0 /* RoomFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B98898E2CBC69FA001CDCE0 /* RoomFormViewController.xib */; };
+		6BA9C3792CBD671C00C16DC1 /* BookRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA9C3782CBD671C00C16DC1 /* BookRoomViewController.xib */; };
+		6BA9C37A2CBD671C00C16DC1 /* BookRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9C3772CBD671C00C16DC1 /* BookRoomViewController.swift */; };
+		6BA9C37C2CBDB26200C16DC1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9C37B2CBDB26200C16DC1 /* Date.swift */; };
+		6BA9C37E2CBDB8A600C16DC1 /* BookRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9C37D2CBDB8A600C16DC1 /* BookRoomModel.swift */; };
+		6BA9C3812CBDB91C00C16DC1 /* BookRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9C3802CBDB91C00C16DC1 /* BookRoomViewModel.swift */; };
+		6BA9C3832CBDC49E00C16DC1 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9C3822CBDC49E00C16DC1 /* BaseButton.swift */; };
+		6BA9C3852CBDC7CB00C16DC1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9C3842CBDC7CB00C16DC1 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B719C662CBC7FB800F10E39 /* RoomFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFormViewModel.swift; sourceTree = "<group>"; };
 		6B719C682CBC80D500F10E39 /* PriceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextField.swift; sourceTree = "<group>"; };
+		6B719C6B2CBC8C2000F10E39 /* RoomsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsListViewController.swift; sourceTree = "<group>"; };
+		6B719C6C2CBC8C2000F10E39 /* RoomsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomsListViewController.xib; sourceTree = "<group>"; };
 		6B8C53E52CB9BEC4002557E3 /* Hotel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B8C53E82CB9BEC4002557E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B8C53EA2CB9BEC4002557E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +98,13 @@
 		6B9889892CBC662F001CDCE0 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		6B98898D2CBC69FA001CDCE0 /* RoomFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFormViewController.swift; sourceTree = "<group>"; };
 		6B98898E2CBC69FA001CDCE0 /* RoomFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomFormViewController.xib; sourceTree = "<group>"; };
+		6BA9C3772CBD671C00C16DC1 /* BookRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRoomViewController.swift; sourceTree = "<group>"; };
+		6BA9C3782CBD671C00C16DC1 /* BookRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRoomViewController.xib; sourceTree = "<group>"; };
+		6BA9C37B2CBDB26200C16DC1 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		6BA9C37D2CBDB8A600C16DC1 /* BookRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRoomModel.swift; sourceTree = "<group>"; };
+		6BA9C3802CBDB91C00C16DC1 /* BookRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRoomViewModel.swift; sourceTree = "<group>"; };
+		6BA9C3822CBDC49E00C16DC1 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		6BA9C3842CBDC7CB00C16DC1 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		99D36D7477B5E93D22244F8B /* Pods_Hotel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hotel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE18B0F3742FA577FE3D36D /* Pods-Hotel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel.debug.xcconfig"; path = "Target Support Files/Pods-Hotel/Pods-Hotel.debug.xcconfig"; sourceTree = "<group>"; };
 		E931EECF51BAC4B59D430A8E /* Pods-Hotel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel.release.xcconfig"; path = "Target Support Files/Pods-Hotel/Pods-Hotel.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +147,42 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6B719C6A2CBC8BF600F10E39 /* RoomsList */ = {
+			isa = PBXGroup;
+			children = (
+				6B719C6B2CBC8C2000F10E39 /* RoomsListViewController.swift */,
+				6B719C6C2CBC8C2000F10E39 /* RoomsListViewController.xib */,
+			);
+			path = RoomsList;
+			sourceTree = "<group>";
+		};
+		6B719C6F2CBC8CF500F10E39 /* BookRoom */ = {
+			isa = PBXGroup;
+			children = (
+				6BA9C37F2CBDB90E00C16DC1 /* ViewModel */,
+				6B719C712CBC8D0D00F10E39 /* BookRoomModel */,
+				6B719C702CBC8CFB00F10E39 /* View */,
+			);
+			path = BookRoom;
+			sourceTree = "<group>";
+		};
+		6B719C702CBC8CFB00F10E39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BA9C3772CBD671C00C16DC1 /* BookRoomViewController.swift */,
+				6BA9C3782CBD671C00C16DC1 /* BookRoomViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B719C712CBC8D0D00F10E39 /* BookRoomModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BA9C37D2CBDB8A600C16DC1 /* BookRoomModel.swift */,
+			);
+			path = BookRoomModel;
+			sourceTree = "<group>";
+		};
 		6B8C53DC2CB9BEC4002557E3 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +204,8 @@
 		6B8C53E72CB9BEC4002557E3 /* Hotel */ = {
 			isa = PBXGroup;
 			children = (
+				6B719C6F2CBC8CF500F10E39 /* BookRoom */,
+				6B719C6A2CBC8BF600F10E39 /* RoomsList */,
 				6B98898B2CBC69D3001CDCE0 /* RoomForm */,
 				6B9889762CBC2E99001CDCE0 /* Rooms */,
 				6B9889732CBB190A001CDCE0 /* CoreData */,
@@ -176,8 +232,11 @@
 				6B98896C2CB9F9AD001CDCE0 /* BaseTextView.swift */,
 				6B98896A2CB9F7C5001CDCE0 /* BaseTextField.swift */,
 				6B9889892CBC662F001CDCE0 /* Double.swift */,
+				6BA9C3822CBDC49E00C16DC1 /* BaseButton.swift */,
 				6B8C54112CB9C504002557E3 /* UIView.swift */,
 				6B9889872CBC4EBC001CDCE0 /* BottomRoundedView.swift */,
+				6BA9C3842CBDC7CB00C16DC1 /* String.swift */,
+				6BA9C37B2CBDB26200C16DC1 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -312,6 +371,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6BA9C37F2CBDB90E00C16DC1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BA9C3802CBDB91C00C16DC1 /* BookRoomViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,7 +441,9 @@
 			files = (
 				6B98894B2CB9E532001CDCE0 /* Roboto-Medium.ttf in Resources */,
 				6B9889842CBC2F9B001CDCE0 /* RoomTableViewCell.xib in Resources */,
+				6BA9C3792CBD671C00C16DC1 /* BookRoomViewController.xib in Resources */,
 				6B9889552CB9EA10001CDCE0 /* Inter-Regular.otf in Resources */,
+				6B719C6D2CBC8C2000F10E39 /* RoomsListViewController.xib in Resources */,
 				6B9889562CB9EA10001CDCE0 /* Inter-LightItalic.otf in Resources */,
 				6B9889572CB9EA10001CDCE0 /* Inter-Medium.otf in Resources */,
 				6B9889902CBC69FA001CDCE0 /* RoomFormViewController.xib in Resources */,
@@ -439,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9889882CBC4EBC001CDCE0 /* BottomRoundedView.swift in Sources */,
+				6BA9C37E2CBDB8A600C16DC1 /* BookRoomModel.swift in Sources */,
 				6B9889652CB9F44E001CDCE0 /* HotelModel.swift in Sources */,
 				6B8C54102CB9C4FB002557E3 /* ShadowView.swift in Sources */,
 				6B9889792CBC2EB9001CDCE0 /* RoomModel.swift in Sources */,
@@ -449,6 +519,7 @@
 				6B98896B2CB9F7C5001CDCE0 /* BaseTextField.swift in Sources */,
 				6B8C54122CB9C504002557E3 /* UIView.swift in Sources */,
 				6B9889832CBC2F9B001CDCE0 /* RoomTableViewCell.swift in Sources */,
+				6BA9C3852CBDC7CB00C16DC1 /* String.swift in Sources */,
 				6B98898F2CBC69FA001CDCE0 /* RoomFormViewController.swift in Sources */,
 				6B8C540E2CB9C387002557E3 /* Font.swift in Sources */,
 				6B8C53F32CB9BEC4002557E3 /* Hotel.xcdatamodeld in Sources */,
@@ -456,10 +527,15 @@
 				6B719C692CBC80D500F10E39 /* PriceTextField.swift in Sources */,
 				6B8C53EB2CB9BEC4002557E3 /* SceneDelegate.swift in Sources */,
 				6B9889692CB9F472001CDCE0 /* HotelViewController.swift in Sources */,
+				6BA9C3832CBDC49E00C16DC1 /* BaseButton.swift in Sources */,
 				6B9889722CB9FF8E001CDCE0 /* HotelViewModel.swift in Sources */,
+				6B719C6E2CBC8C2000F10E39 /* RoomsListViewController.swift in Sources */,
 				6B9889752CBB193E001CDCE0 /* CoreDataManager.swift in Sources */,
 				6B98896D2CB9F9AD001CDCE0 /* BaseTextView.swift in Sources */,
+				6BA9C37A2CBD671C00C16DC1 /* BookRoomViewController.swift in Sources */,
+				6BA9C37C2CBDB26200C16DC1 /* Date.swift in Sources */,
 				6B98898A2CBC662F001CDCE0 /* Double.swift in Sources */,
+				6BA9C3812CBDB91C00C16DC1 /* BookRoomViewModel.swift in Sources */,
 				6B9889862CBC45A3001CDCE0 /* RoomsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,7 +614,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -595,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -616,11 +692,12 @@
 				DEVELOPMENT_TEAM = 9YUSQBCAX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hotel/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to choose photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Menu;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -645,11 +722,12 @@
 				DEVELOPMENT_TEAM = 9YUSQBCAX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hotel/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to choose photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Menu;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

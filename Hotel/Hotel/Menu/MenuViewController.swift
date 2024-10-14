@@ -30,8 +30,11 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedBookRoom(_ sender: UIButton) {
+        self.pushViewController(RoomsListViewController.self)
     }
+    
     @IBAction func clickedBooking(_ sender: UIButton) {
+        self.pushViewController(BookRoomViewController.self)
     }
     @IBAction func clickedSupport(_ sender: UIButton) {
     }

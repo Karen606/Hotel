@@ -131,4 +131,29 @@ class CoreDataManager {
             }
         }
     }
+    
+    func saveBookRoom(bookRoomModel: BookRoomModel, completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            do {
+                let bookRoom = BookRoom(context: backgroundContext)
+                bookRoom.id = bookRoomModel.roomId
+                bookRoom.startDate = bookRoomModel.startDate
+                bookRoom.endDate = bookRoomModel.endDate
+                bookRoom.numberOfGuests = bookRoomModel.numberOfGuests
+                bookRoom.name = bookRoomModel.name
+                bookRoom.surname = bookRoomModel.surname
+                bookRoom.email = bookRoomModel.email
+                bookRoom.phoneNumber = bookRoomModel.phoneNumber
+                try backgroundContext.save()
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
 }
