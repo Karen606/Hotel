@@ -83,6 +83,12 @@ extension BookingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bookinDetailsVC = BookingDetailsViewController(nibName: "BookingDetailsViewController", bundle: nil)
+        bookinDetailsVC.bookingModel = viewModel.bookings[indexPath.section]
+        self.navigationController?.pushViewController(bookinDetailsVC, animated: true)
+    }
 }
 
 extension BookingsViewController: BookingTableViewDelegate {

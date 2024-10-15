@@ -59,6 +59,8 @@
 		6BA9C38B2CBDE6EB00C16DC1 /* BookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9C3882CBDE6EB00C16DC1 /* BookingsViewController.swift */; };
 		6BA9C38F2CBDE96A00C16DC1 /* BookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA9C38E2CBDE96A00C16DC1 /* BookingTableViewCell.xib */; };
 		6BA9C3902CBDE96A00C16DC1 /* BookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9C38D2CBDE96A00C16DC1 /* BookingTableViewCell.swift */; };
+		6BDB89F02CBDFC49002174E8 /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB89EE2CBDFC49002174E8 /* BookingDetailsViewController.swift */; };
+		6BDB89F12CBDFC49002174E8 /* BookingDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDB89EF2CBDFC49002174E8 /* BookingDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,8 @@
 		6BA9C3892CBDE6EB00C16DC1 /* BookingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingsViewController.xib; sourceTree = "<group>"; };
 		6BA9C38D2CBDE96A00C16DC1 /* BookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewCell.swift; sourceTree = "<group>"; };
 		6BA9C38E2CBDE96A00C16DC1 /* BookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingTableViewCell.xib; sourceTree = "<group>"; };
+		6BDB89EE2CBDFC49002174E8 /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
+		6BDB89EF2CBDFC49002174E8 /* BookingDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailsViewController.xib; sourceTree = "<group>"; };
 		99D36D7477B5E93D22244F8B /* Pods_Hotel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hotel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE18B0F3742FA577FE3D36D /* Pods-Hotel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel.debug.xcconfig"; path = "Target Support Files/Pods-Hotel/Pods-Hotel.debug.xcconfig"; sourceTree = "<group>"; };
 		E931EECF51BAC4B59D430A8E /* Pods-Hotel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel.release.xcconfig"; path = "Target Support Files/Pods-Hotel/Pods-Hotel.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 		6B8C53E72CB9BEC4002557E3 /* Hotel */ = {
 			isa = PBXGroup;
 			children = (
+				6BDB89EC2CBDFC24002174E8 /* BookingDetails */,
 				6BA9C3862CBDE6D900C16DC1 /* Bookings */,
 				6B719C6F2CBC8CF500F10E39 /* BookRoom */,
 				6B719C6A2CBC8BF600F10E39 /* RoomsList */,
@@ -426,6 +431,23 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		6BDB89EC2CBDFC24002174E8 /* BookingDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6BDB89ED2CBDFC34002174E8 /* View */,
+			);
+			path = BookingDetails;
+			sourceTree = "<group>";
+		};
+		6BDB89ED2CBDFC34002174E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BDB89EE2CBDFC49002174E8 /* BookingDetailsViewController.swift */,
+				6BDB89EF2CBDFC49002174E8 /* BookingDetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -503,6 +525,7 @@
 				6B8C53F02CB9BEC4002557E3 /* Base in Resources */,
 				6B9889502CB9E970001CDCE0 /* TT Severs Trial DemiBold.otf in Resources */,
 				6B9889512CB9E970001CDCE0 /* TT Severs Trial Medium.otf in Resources */,
+				6BDB89F12CBDFC49002174E8 /* BookingDetailsViewController.xib in Resources */,
 				6B98894D2CB9E892001CDCE0 /* TT Travels Next DemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9889882CBC4EBC001CDCE0 /* BottomRoundedView.swift in Sources */,
+				6BDB89F02CBDFC49002174E8 /* BookingDetailsViewController.swift in Sources */,
 				6BA9C3902CBDE96A00C16DC1 /* BookingTableViewCell.swift in Sources */,
 				6BA9C37E2CBDB8A600C16DC1 /* BookRoomModel.swift in Sources */,
 				6B9889652CB9F44E001CDCE0 /* HotelModel.swift in Sources */,
