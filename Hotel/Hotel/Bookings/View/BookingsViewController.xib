@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingsViewController" customModule="Hotel" customModuleProvider="target">
+            <connections>
+                <outlet property="archiveBookingButton" destination="I3D-b2-upl" id="MWV-jO-S6F"/>
+                <outlet property="bookingsTableView" destination="RuQ-J7-uOD" id="Xo5-HV-80b"/>
+                <outlet property="currentBookingButton" destination="Drd-Xt-YRB" id="d9l-DO-FxE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DTE-SP-1C7">
+                    <rect key="frame" x="0.0" y="59" width="430" height="36"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drd-Xt-YRB" customClass="SectionButton" customModule="Hotel" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="210" height="36"/>
+                            <color key="backgroundColor" name="baseBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="Cr9-n8-RVR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Current booking">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedCurrentBookings:" destination="-1" eventType="touchUpInside" id="CU1-mR-mMq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3D-b2-upl" customClass="SectionButton" customModule="Hotel" customModuleProvider="target">
+                            <rect key="frame" x="220" y="0.0" width="210" height="36"/>
+                            <color key="backgroundColor" name="baseBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="jRO-72-2Pk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Archive booking">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedArchiveBookings:" destination="-1" eventType="touchUpInside" id="FUe-OQ-GSL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RuQ-J7-uOD">
+                    <rect key="frame" x="0.0" y="103" width="430" height="795"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RuQ-J7-uOD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Ih-aS-M5q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RuQ-J7-uOD" secondAttribute="trailing" id="Ahk-Uo-sxQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DTE-SP-1C7" secondAttribute="trailing" id="GJ0-US-njA"/>
+                <constraint firstItem="RuQ-J7-uOD" firstAttribute="top" secondItem="DTE-SP-1C7" secondAttribute="bottom" constant="8" symbolic="YES" id="Izn-O0-10V"/>
+                <constraint firstItem="DTE-SP-1C7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VRM-ST-OlH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RuQ-J7-uOD" secondAttribute="bottom" id="h2R-vQ-CCd"/>
+                <constraint firstItem="DTE-SP-1C7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qiL-O7-KWq"/>
+            </constraints>
+            <point key="canvasLocation" x="-153.48837209302326" y="-12.875536480686696"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="baseBlue">
+            <color red="0.32499998807907104" green="0.85100001096725464" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -64,7 +64,7 @@ class BookRoomViewController: UIViewController {
         endDatePicker.addTarget(self, action: #selector(endDatePickerValueChanged(sender:)), for: .valueChanged)
         startDateTextField.inputView = startDatePicker
         endDateTextField.inputView = endDatePicker
-        textFields.forEach({ $0.delegate = self })
+        textFields.forEach({ $0.delegate = self; $0.layer.borderWidth = 1; $0.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor })
     }
     
     func subscribe() {

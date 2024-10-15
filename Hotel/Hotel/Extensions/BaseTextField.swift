@@ -8,7 +8,7 @@
 import UIKit
 
 class BaseTextField: UITextField {
-    private var padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 14)
+    private var padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 14)
     private let bottomLabel = UILabel()
     private var heightConst: CGFloat = 0
     private var isValidate: Bool = true {

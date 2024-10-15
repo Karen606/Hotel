@@ -8,7 +8,9 @@
 import Foundation
 
 struct BookRoomModel {
+    var id: UUID?
     var roomId: UUID?
+    var photo: Data?
     var startDate: Date?
     var endDate: Date?
     var numberOfGuests: String?

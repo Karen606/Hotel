@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -85,6 +86,7 @@
                             <constraint firstItem="qHf-ri-17Q" firstAttribute="leading" secondItem="lgh-gB-E9C" secondAttribute="leading" constant="3" id="QKE-wA-3Iu"/>
                             <constraint firstAttribute="trailing" secondItem="Qbb-Qe-Ohn" secondAttribute="trailing" constant="10.666666666666686" id="TzV-wO-Cu0"/>
                             <constraint firstAttribute="trailing" secondItem="OLL-v3-1QU" secondAttribute="trailing" constant="3" id="YsH-fe-qdv"/>
+                            <constraint firstAttribute="trailing" secondItem="1pj-DW-x5M" secondAttribute="trailing" constant="16" id="Znh-Mv-V3M"/>
                             <constraint firstAttribute="trailing" secondItem="qHf-ri-17Q" secondAttribute="trailing" constant="3" id="d1u-dY-Tvd"/>
                             <constraint firstItem="1pj-DW-x5M" firstAttribute="top" secondItem="qHf-ri-17Q" secondAttribute="bottom" constant="8" symbolic="YES" id="dzZ-KL-rET"/>
                             <constraint firstItem="qHf-ri-17Q" firstAttribute="top" secondItem="lgh-gB-E9C" secondAttribute="top" constant="3" id="lv8-oe-Ai1"/>
