@@ -8,7 +8,10 @@
         <attribute name="numberOfGuests" optional="YES" attributeType="String"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
         <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="roomBed" optional="YES" attributeType="String"/>
         <attribute name="roomID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="roomSize" optional="YES" attributeType="String"/>
+        <attribute name="roomType" optional="YES" attributeType="String"/>
         <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="surname" optional="YES" attributeType="String"/>
     </entity>
@@ -20,9 +23,12 @@
         <attribute name="services" optional="YES" attributeType="Transformable" customClassName="[String]"/>
     </entity>
     <entity name="Room" representedClassName="Room" syncable="YES" codeGenerationType="class">
+        <attribute name="bed" optional="YES" attributeType="String"/>
         <attribute name="facilities" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="photo" optional="YES" attributeType="Binary"/>
         <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="size" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
 </model>

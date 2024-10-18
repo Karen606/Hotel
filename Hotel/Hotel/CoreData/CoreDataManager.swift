@@ -98,6 +98,9 @@ class CoreDataManager {
                 }
                 room.photo = roomModel.photo
                 room.price = roomModel.price ?? 0
+                room.type = roomModel.type
+                room.size = roomModel.size
+                room.bed = roomModel.bed
                 room.facilities = roomModel.facilities
                 try backgroundContext.save()
                 DispatchQueue.main.async {
@@ -120,7 +123,7 @@ class CoreDataManager {
                 let results = try backgroundContext.fetch(fetchRequest)
                 var roomsModel: [RoomModel] = []
                 for result in results {
-                    let roomModel = RoomModel(id: result.id, photo: result.photo, price: result.price, facilities: result.facilities)
+                    let roomModel = RoomModel(id: result.id, photo: result.photo, price: result.price, type: result.type, size: result.size, bed: result.bed, facilities: result.facilities)
                     roomsModel.append(roomModel)
                 }
                 completion(roomsModel, nil)
@@ -147,6 +150,9 @@ class CoreDataManager {
                 bookRoom.email = bookRoomModel.email
                 bookRoom.phoneNumber = bookRoomModel.phoneNumber
                 bookRoom.photo = bookRoomModel.photo
+                bookRoom.roomType = bookRoomModel.roomType
+                bookRoom.roomSize = bookRoomModel.roomSize
+                bookRoom.roomBed = bookRoomModel.roomBed
                 try backgroundContext.save()
                 DispatchQueue.main.async {
                     completion(nil)
@@ -168,7 +174,7 @@ class CoreDataManager {
                 let results = try backgroundContext.fetch(fetchRequest)
                 var bookingsModel: [BookRoomModel] = []
                 for result in results {
-                    let bookingModel = BookRoomModel(id: result.id, roomId: result.roomID, photo: result.photo, startDate: result.startDate, endDate: result.endDate, numberOfGuests: result.numberOfGuests, name: result.name, surname: result.surname, email: result.email, phoneNumber: result.phoneNumber)
+                    let bookingModel = BookRoomModel(id: result.id, roomId: result.roomID, photo: result.photo, startDate: result.startDate, endDate: result.endDate, numberOfGuests: result.numberOfGuests, name: result.name, surname: result.surname, email: result.email, phoneNumber: result.phoneNumber, roomType: result.roomType, roomSize: result.roomSize, roomBed: result.roomBed)
                     bookingsModel.append(bookingModel)
                 }
                 completion(bookingsModel, nil)

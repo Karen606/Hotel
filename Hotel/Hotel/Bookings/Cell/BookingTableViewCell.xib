@@ -39,19 +39,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gW-CU-ORh" customClass="BottomRoundedView" customModule="Hotel" customModuleProvider="target">
                                 <rect key="frame" x="3" y="159" width="307" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cb-4j-Ayv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cb-4j-Ayv">
                                         <rect key="frame" x="246.33333333333331" y="2" width="32" height="37"/>
                                         <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThW-1N-ugZ">
+                                        <rect key="frame" x="4" y="10" width="234.33333333333334" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPc-P7-OzU">
+                                        <rect key="frame" x="4" y="27" width="234" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32499998810000003" green="0.851000011" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="MPc-P7-OzU" firstAttribute="leading" secondItem="1gW-CU-ORh" secondAttribute="leading" constant="4" id="71y-FJ-yhb"/>
                                     <constraint firstAttribute="bottom" secondItem="7Cb-4j-Ayv" secondAttribute="bottom" constant="5" id="DI9-GY-HDE"/>
                                     <constraint firstAttribute="trailing" secondItem="7Cb-4j-Ayv" secondAttribute="trailing" constant="28.666666666666686" id="Dss-bd-VCy"/>
+                                    <constraint firstItem="ThW-1N-ugZ" firstAttribute="top" secondItem="1gW-CU-ORh" secondAttribute="top" constant="10" id="Fw8-uy-e2x"/>
+                                    <constraint firstItem="7Cb-4j-Ayv" firstAttribute="leading" secondItem="MPc-P7-OzU" secondAttribute="trailing" constant="8.3333333333333144" id="Qtr-Oj-oz6"/>
+                                    <constraint firstItem="7Cb-4j-Ayv" firstAttribute="leading" secondItem="ThW-1N-ugZ" secondAttribute="trailing" constant="8" id="WdS-Dr-uuv"/>
                                     <constraint firstAttribute="height" constant="44" id="aVO-GZ-gzH"/>
                                     <constraint firstItem="7Cb-4j-Ayv" firstAttribute="top" secondItem="1gW-CU-ORh" secondAttribute="top" constant="2" id="fFO-Cb-4lG"/>
+                                    <constraint firstItem="MPc-P7-OzU" firstAttribute="top" secondItem="ThW-1N-ugZ" secondAttribute="bottom" constant="3" id="mUr-mx-Faj"/>
+                                    <constraint firstItem="ThW-1N-ugZ" firstAttribute="leading" secondItem="1gW-CU-ORh" secondAttribute="leading" constant="4" id="zsd-LP-rmd"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -101,6 +119,8 @@
                 <outlet property="dateLabel" destination="7Cb-4j-Ayv" id="Ek2-Sn-Ewm"/>
                 <outlet property="dateView" destination="1gW-CU-ORh" id="J0G-vU-skl"/>
                 <outlet property="roomImageView" destination="wX0-97-g5J" id="FE2-Gz-WBk"/>
+                <outlet property="sizeLabel" destination="MPc-P7-OzU" id="JXU-d1-0kV"/>
+                <outlet property="typeLabel" destination="ThW-1N-ugZ" id="sxv-jI-USW"/>
             </connections>
             <point key="canvasLocation" x="138.83720930232559" y="19.95708154506438"/>
         </tableViewCell>

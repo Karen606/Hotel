@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -30,9 +31,11 @@
                 <outlet property="resetButton" destination="2pr-0a-6Qx" id="79W-59-9Az"/>
                 <outlet property="roomImageView" destination="UUX-az-M8e" id="nlV-bP-1aU"/>
                 <outlet property="scrollView" destination="tFv-vW-s4p" id="JF7-Me-ZK3"/>
+                <outlet property="sizeLabel" destination="ixL-gi-70a" id="D9x-B8-2NZ"/>
                 <outlet property="startDateTextField" destination="Jfs-lS-C2S" id="hmd-ik-L6J"/>
                 <outlet property="surnameTextField" destination="cVC-Lz-daa" id="Gl1-8q-fEy"/>
                 <outlet property="toBookButton" destination="5fU-Ez-NZY" id="JE5-37-fJQ"/>
+                <outlet property="typeLabel" destination="Aio-u8-iD4" id="Fbc-JA-m6N"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="titleLabels" destination="gZ2-29-Xgy" collectionClass="NSMutableArray" id="k5h-oa-B1z"/>
                 <outletCollection property="titleLabels" destination="h1h-TK-Ith" collectionClass="NSMutableArray" id="pqZ-aE-P13"/>
@@ -91,18 +94,36 @@
                                                         <action selector="clickedShowMore:" destination="-1" eventType="touchUpInside" id="3mR-rz-ngK"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozt-E1-cPY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozt-E1-cPY">
                                                     <rect key="frame" x="256" y="11.999999999999998" width="41.333333333333314" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aio-u8-iD4">
+                                                    <rect key="frame" x="4" y="12" width="244" height="14.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixL-gi-70a">
+                                                    <rect key="frame" x="4" y="29.333333333333314" width="244" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.32499998810000003" green="0.851000011" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="Aio-u8-iD4" firstAttribute="leading" secondItem="pLU-S2-CjF" secondAttribute="leading" constant="4" id="0If-bR-Wse"/>
                                                 <constraint firstAttribute="bottom" secondItem="Ozt-E1-cPY" secondAttribute="bottom" constant="11.666666666666657" id="28B-qX-HPj"/>
                                                 <constraint firstAttribute="trailing" secondItem="ALt-8M-B7q" secondAttribute="trailing" constant="8" id="C3n-Ck-gjQ"/>
+                                                <constraint firstItem="ixL-gi-70a" firstAttribute="top" secondItem="Aio-u8-iD4" secondAttribute="bottom" constant="3" id="Seo-nF-jSP"/>
+                                                <constraint firstItem="ixL-gi-70a" firstAttribute="leading" secondItem="pLU-S2-CjF" secondAttribute="leading" constant="4" id="aDp-wg-ACM"/>
                                                 <constraint firstAttribute="bottom" secondItem="ALt-8M-B7q" secondAttribute="bottom" constant="8" id="fQH-GN-jqN"/>
+                                                <constraint firstItem="Ozt-E1-cPY" firstAttribute="leading" secondItem="ixL-gi-70a" secondAttribute="trailing" constant="8" symbolic="YES" id="nMk-JD-eyz"/>
+                                                <constraint firstItem="Ozt-E1-cPY" firstAttribute="leading" secondItem="Aio-u8-iD4" secondAttribute="trailing" constant="8" symbolic="YES" id="rHk-Yo-n62"/>
+                                                <constraint firstItem="Aio-u8-iD4" firstAttribute="top" secondItem="pLU-S2-CjF" secondAttribute="top" constant="12" id="wHB-aj-IVu"/>
                                                 <constraint firstAttribute="height" constant="44" id="xKf-N5-ZyI"/>
                                                 <constraint firstItem="ALt-8M-B7q" firstAttribute="leading" secondItem="Ozt-E1-cPY" secondAttribute="trailing" constant="8.6666666666666856" id="yYF-JZ-Mcq"/>
                                             </constraints>

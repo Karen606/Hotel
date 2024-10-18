@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <accessibilityOverrides/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,14 +13,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoomFormViewController" customModule="Hotel" customModuleProvider="target">
             <connections>
+                <outlet property="bedTextField" destination="acW-NO-yWW" id="O9B-JV-2kp"/>
                 <outlet property="facilitiesStackView" destination="ioC-0e-nbA" id="rmN-Fu-gfL"/>
                 <outlet property="facilitiesTextField" destination="ItR-gu-zSY" id="RMK-BP-vPc"/>
                 <outlet property="photoButton" destination="0jM-B8-gQx" id="bQZ-em-rMf"/>
-                <outlet property="priceTextField" destination="6XU-kU-4Dg" id="ahg-Ie-xGw"/>
+                <outlet property="priceTextField" destination="sRa-we-fsq" id="4kl-Nk-J09"/>
+                <outlet property="roomSizeTextField" destination="XP8-P5-9MO" id="8or-7A-96y"/>
+                <outlet property="roomTypeTextField" destination="NFo-nG-HYI" id="6B5-LM-TuM"/>
+                <outlet property="saveButton" destination="dr8-TC-7Ud" id="f2p-4O-EV5"/>
                 <outlet property="scrollView" destination="ZBL-kM-Uy3" id="abx-ge-6iA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="titleLabels" destination="otw-0r-oOz" collectionClass="NSMutableArray" id="hdd-XZ-ULH"/>
-                <outletCollection property="titleLabels" destination="Dqj-5g-Y9S" collectionClass="NSMutableArray" id="jOj-3I-uFc"/>
+                <outletCollection property="titleLabels" destination="mFj-4X-k2Y" collectionClass="NSMutableArray" id="REK-6q-bQR"/>
+                <outletCollection property="titleLabels" destination="Fd3-08-7bh" collectionClass="NSMutableArray" id="Y2r-fZ-Lyd"/>
+                <outletCollection property="titleLabels" destination="RVf-d8-N7R" collectionClass="NSMutableArray" id="nPC-5l-6lf"/>
+                <outletCollection property="titleLabels" destination="U8v-Wt-hOH" collectionClass="NSMutableArray" id="PLU-92-3tS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,13 +39,13 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJu-1t-g2s">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="370"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="412.33333333333331"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-Rn-eMj" customClass="ShadowView" customModule="Hotel" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="26" width="313" height="320"/>
+                                    <rect key="frame" x="40" y="26" width="313" height="362.33333333333331"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ioC-0e-nbA">
-                                            <rect key="frame" x="8" y="195" width="297" height="26"/>
+                                            <rect key="frame" x="8" y="237.33333333333331" width="297" height="26"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ItR-gu-zSY" customClass="BaseTextField" customModule="Hotel" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="297" height="26"/>
@@ -51,7 +59,7 @@
                                             </subviews>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-V0-3zN">
-                                            <rect key="frame" x="146" y="240" width="21" height="22"/>
+                                            <rect key="frame" x="146" y="282.33333333333331" width="21" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="21" id="9Qv-Hf-akc"/>
                                                 <constraint firstAttribute="height" constant="22" id="Opb-2y-zex"/>
@@ -63,7 +71,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr8-TC-7Ud">
-                                            <rect key="frame" x="253" y="278" width="58" height="26"/>
+                                            <rect key="frame" x="253" y="320.33333333333331" width="58" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="58" id="vhX-10-ETk"/>
                                             </constraints>
@@ -88,45 +96,173 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Services and facilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otw-0r-oOz">
-                                            <rect key="frame" x="7.9999999999999929" y="180.66666666666669" width="123.33333333333331" height="14.333333333333343"/>
+                                            <rect key="frame" x="7.9999999999999929" y="223" width="123.33333333333331" height="14.333333333333343"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" name="grayTitle"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6XU-kU-4Dg" customClass="PricesTextField" customModule="Hotel" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="149.66666666666666" width="156.66666666666666" height="26"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="26" id="8hL-K1-swH"/>
-                                            </constraints>
-                                            <color key="textColor" name="grayTitle"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price per night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-5g-Y9S">
-                                            <rect key="frame" x="8" y="135" width="78.333333333333329" height="14"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                            <color key="textColor" name="grayTitle"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="3yJ-8a-EJo">
+                                            <rect key="frame" x="8" y="135" width="297" height="83"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ndj-BO-UgH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="297" height="40"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lc8-1S-ldJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price per night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-4X-k2Y">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                    <color key="textColor" name="grayTitle"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-we-fsq" customClass="PricesTextField" customModule="Hotel" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="14" width="146" height="26"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="26" id="JCY-jN-hY9"/>
+                                                                    </constraints>
+                                                                    <color key="textColor" name="grayTitle"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="sRa-we-fsq" firstAttribute="top" secondItem="mFj-4X-k2Y" secondAttribute="bottom" id="11u-Uo-Ak8"/>
+                                                                <constraint firstItem="mFj-4X-k2Y" firstAttribute="leading" secondItem="lc8-1S-ldJ" secondAttribute="leading" id="Z1e-gg-hMT"/>
+                                                                <constraint firstAttribute="bottom" secondItem="sRa-we-fsq" secondAttribute="bottom" id="duz-3O-J99"/>
+                                                                <constraint firstAttribute="trailing" secondItem="sRa-we-fsq" secondAttribute="trailing" id="gT6-4V-bvE"/>
+                                                                <constraint firstAttribute="height" constant="40" id="h3f-dg-nEn"/>
+                                                                <constraint firstItem="mFj-4X-k2Y" firstAttribute="top" secondItem="lc8-1S-ldJ" secondAttribute="top" id="m3b-jn-pOo"/>
+                                                                <constraint firstItem="sRa-we-fsq" firstAttribute="leading" secondItem="lc8-1S-ldJ" secondAttribute="leading" id="ngR-fO-a94"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pA-oK-6yi">
+                                                            <rect key="frame" x="151" y="0.0" width="146" height="40"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLV-yr-ETL">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="40"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room type and View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd3-08-7bh">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="14"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                            <color key="textColor" name="grayTitle"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFo-nG-HYI" customClass="BaseTextField" customModule="Hotel" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="14" width="146" height="26"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="26" id="ZKn-JT-NYz"/>
+                                                                            </constraints>
+                                                                            <color key="textColor" name="grayTitle"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                            <textInputTraits key="textInputTraits"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="NFo-nG-HYI" firstAttribute="top" secondItem="Fd3-08-7bh" secondAttribute="bottom" id="1mF-X2-JHr"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="4BJ-dC-nKC"/>
+                                                                        <constraint firstItem="NFo-nG-HYI" firstAttribute="leading" secondItem="pLV-yr-ETL" secondAttribute="leading" id="4ZH-XT-E3C"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="NFo-nG-HYI" secondAttribute="trailing" id="4sc-eN-xFr"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="NFo-nG-HYI" secondAttribute="bottom" id="axR-c0-Dv5"/>
+                                                                        <constraint firstItem="Fd3-08-7bh" firstAttribute="top" secondItem="pLV-yr-ETL" secondAttribute="top" id="e6R-U2-qZ6"/>
+                                                                        <constraint firstItem="Fd3-08-7bh" firstAttribute="leading" secondItem="pLV-yr-ETL" secondAttribute="leading" id="yse-lp-e0u"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oG6-Kd-KG3">
+                                                    <rect key="frame" x="0.0" y="43" width="297" height="40"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4f-YG-vlu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room size " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVf-d8-N7R">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                    <color key="textColor" name="grayTitle"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XP8-P5-9MO" customClass="BaseTextField" customModule="Hotel" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="14" width="146" height="26"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="26" id="g1S-Ij-i41"/>
+                                                                    </constraints>
+                                                                    <color key="textColor" name="grayTitle"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="XP8-P5-9MO" firstAttribute="leading" secondItem="O4f-YG-vlu" secondAttribute="leading" id="8gp-dp-XTa"/>
+                                                                <constraint firstItem="XP8-P5-9MO" firstAttribute="top" secondItem="RVf-d8-N7R" secondAttribute="bottom" id="QSF-PX-EcD"/>
+                                                                <constraint firstAttribute="trailing" secondItem="XP8-P5-9MO" secondAttribute="trailing" id="WJS-bu-k2G"/>
+                                                                <constraint firstAttribute="bottom" secondItem="XP8-P5-9MO" secondAttribute="bottom" id="WUt-5V-CiL"/>
+                                                                <constraint firstItem="RVf-d8-N7R" firstAttribute="leading" secondItem="O4f-YG-vlu" secondAttribute="leading" id="dhO-lR-7jw"/>
+                                                                <constraint firstAttribute="height" constant="40" id="rhD-b2-DPH"/>
+                                                                <constraint firstItem="RVf-d8-N7R" firstAttribute="top" secondItem="O4f-YG-vlu" secondAttribute="top" id="ugf-Tr-vMN"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-uA-ggS">
+                                                            <rect key="frame" x="151" y="0.0" width="146" height="40"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ta-Q9-Tsg">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="40"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8v-Wt-hOH">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="22" height="14"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                            <color key="textColor" name="grayTitle"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acW-NO-yWW" customClass="BaseTextField" customModule="Hotel" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="14" width="146" height="26"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="26" id="EO7-6x-MQ5"/>
+                                                                            </constraints>
+                                                                            <color key="textColor" name="grayTitle"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                            <textInputTraits key="textInputTraits"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="F7Q-Wl-hB8"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="acW-NO-yWW" secondAttribute="bottom" id="MKh-cg-Y8w"/>
+                                                                        <constraint firstItem="acW-NO-yWW" firstAttribute="top" secondItem="U8v-Wt-hOH" secondAttribute="bottom" id="Oxg-sT-mO2"/>
+                                                                        <constraint firstItem="acW-NO-yWW" firstAttribute="leading" secondItem="1Ta-Q9-Tsg" secondAttribute="leading" id="g92-Wc-E7a"/>
+                                                                        <constraint firstItem="U8v-Wt-hOH" firstAttribute="top" secondItem="1Ta-Q9-Tsg" secondAttribute="top" id="jNj-ei-PFC"/>
+                                                                        <constraint firstItem="U8v-Wt-hOH" firstAttribute="leading" secondItem="1Ta-Q9-Tsg" secondAttribute="leading" id="kLK-bd-zOh"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="acW-NO-yWW" secondAttribute="trailing" id="msI-17-d64"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstItem="Dqj-5g-Y9S" firstAttribute="top" secondItem="0jM-B8-gQx" secondAttribute="bottom" constant="8" id="3gp-Fz-ga7"/>
-                                        <constraint firstItem="Dqj-5g-Y9S" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="9gp-uI-6lz"/>
+                                        <constraint firstItem="otw-0r-oOz" firstAttribute="top" secondItem="3yJ-8a-EJo" secondAttribute="bottom" constant="5" id="9rS-Nn-HFV"/>
                                         <constraint firstItem="Cqb-V0-3zN" firstAttribute="centerX" secondItem="dXE-Rn-eMj" secondAttribute="centerX" id="JUv-OM-739"/>
                                         <constraint firstItem="otw-0r-oOz" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="Ngr-JY-ZmW"/>
                                         <constraint firstItem="Cqb-V0-3zN" firstAttribute="top" secondItem="ioC-0e-nbA" secondAttribute="bottom" constant="19" id="P7G-B2-bZ5"/>
+                                        <constraint firstAttribute="trailing" secondItem="3yJ-8a-EJo" secondAttribute="trailing" constant="8" id="RCv-mc-S05"/>
                                         <constraint firstAttribute="trailing" secondItem="dr8-TC-7Ud" secondAttribute="trailing" constant="2" id="Sf1-8l-uvu"/>
                                         <constraint firstAttribute="bottom" secondItem="dr8-TC-7Ud" secondAttribute="bottom" constant="16" id="TAw-Dq-TzX"/>
-                                        <constraint firstItem="6XU-kU-4Dg" firstAttribute="top" secondItem="Dqj-5g-Y9S" secondAttribute="bottom" constant="0.66666666666665719" id="TCd-gQ-tqQ"/>
                                         <constraint firstItem="0jM-B8-gQx" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="enC-TL-znl"/>
                                         <constraint firstItem="dr8-TC-7Ud" firstAttribute="top" secondItem="Cqb-V0-3zN" secondAttribute="bottom" constant="16" id="hIz-c6-9ka"/>
                                         <constraint firstItem="0jM-B8-gQx" firstAttribute="top" secondItem="dXE-Rn-eMj" secondAttribute="top" constant="14" id="iXS-Ld-Imy"/>
+                                        <constraint firstItem="3yJ-8a-EJo" firstAttribute="top" secondItem="0jM-B8-gQx" secondAttribute="bottom" constant="8" symbolic="YES" id="na5-kM-pDG"/>
                                         <constraint firstAttribute="trailing" secondItem="0jM-B8-gQx" secondAttribute="trailing" constant="8" id="njC-Uu-xyS"/>
                                         <constraint firstItem="ioC-0e-nbA" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="rm6-Qb-Fww"/>
-                                        <constraint firstItem="6XU-kU-4Dg" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="ugS-Fc-LBa"/>
-                                        <constraint firstItem="6XU-kU-4Dg" firstAttribute="width" secondItem="dXE-Rn-eMj" secondAttribute="width" multiplier="0.5" id="w4C-pT-7LT"/>
-                                        <constraint firstItem="otw-0r-oOz" firstAttribute="top" secondItem="6XU-kU-4Dg" secondAttribute="bottom" constant="5" id="wMx-vc-j7y"/>
+                                        <constraint firstItem="3yJ-8a-EJo" firstAttribute="leading" secondItem="dXE-Rn-eMj" secondAttribute="leading" constant="8" id="uCF-7G-hv6"/>
                                         <constraint firstItem="ioC-0e-nbA" firstAttribute="top" secondItem="otw-0r-oOz" secondAttribute="bottom" id="wRc-zh-lma"/>
                                         <constraint firstAttribute="trailing" secondItem="ioC-0e-nbA" secondAttribute="trailing" constant="8" id="wgu-2G-rpn"/>
                                     </constraints>

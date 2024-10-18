@@ -11,5 +11,8 @@ struct RoomModel {
     var id: UUID?
     var photo: Data?
     var price: Double?
+    var type: String?
+    var size: String?
+    var bed: String?
     var facilities: [String]?
 }

@@ -13,7 +13,8 @@ class RoomTableViewCell: UITableViewCell {
     @IBOutlet weak var bgView: ShadowView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var priceView: UIView!
-    
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var priceNightLabel: UILabel!
     @IBOutlet weak var imageViewBottomConst: NSLayoutConstraint!
@@ -24,6 +25,8 @@ class RoomTableViewCell: UITableViewCell {
         super.awakeFromNib()
         priceLabel.font = .seversMedium(size: 22)
         infoLabel.font = .seversMedium(size: 12)
+        typeLabel.font = .seversDemiBold(size: 12)
+        sizeLabel.font = .seversMedium(size: 10)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,12 +34,17 @@ class RoomTableViewCell: UITableViewCell {
 
     }
     
+    override func prepareForReuse() {
+        roomImageView.image = nil
+    }
+    
     func setupData(room: RoomModel) {
         if let data = room.photo {
             roomImageView.image = UIImage(data: data)
         }
         priceLabel.text = "\(room.price?.formattedToString() ?? "")$"
-        
+        typeLabel.text = room.type
+        sizeLabel.text = "\(room.size ?? "0")m², \(room.bed ?? "")"
         let priceText = "price per night "
         let priceValue = "\(room.price?.formattedToString() ?? "")$"
 

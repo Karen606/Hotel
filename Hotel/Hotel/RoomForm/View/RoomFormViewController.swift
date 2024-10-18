@@ -7,16 +7,22 @@
 
 import UIKit
 import PhotosUI
+import Combine
 
 class RoomFormViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var photoButton: UIButton!
     @IBOutlet weak var priceTextField: PricesTextField!
+    @IBOutlet weak var roomTypeTextField: BaseTextField!
     @IBOutlet weak var facilitiesTextField: BaseTextField!
+    @IBOutlet weak var roomSizeTextField: BaseTextField!
+    @IBOutlet weak var bedTextField: BaseTextField!
     @IBOutlet var titleLabels: [UILabel]!
     @IBOutlet weak var facilitiesStackView: UIStackView!
+    @IBOutlet weak var saveButton: UIButton!
     private let viewModel = RoomFormViewModel.shared
+    private var cancellables: Set<AnyCancellable> = []
     var completion: (() -> ())?
     
     override func viewDidLoad() {
@@ -24,12 +30,26 @@ class RoomFormViewController: UIViewController {
         self.setNavigationBar(title: "Add a Rooms")
         titleLabels.forEach({ $0.font = .interRegular(size: 12) })
         priceTextField.baseDelegate = self
+        roomTypeTextField.delegate = self
+        roomSizeTextField.delegate = self
+        bedTextField.delegate = self
         facilitiesTextField.delegate = self
         registerKeyboardNotifications()
         photoButton.layer.cornerRadius = 6
         photoButton.layer.borderWidth = 0.5
         photoButton.layer.borderColor = UIColor.black.withAlphaComponent(0.7).cgColor
         photoButton.layer.masksToBounds = true
+        subscribe()
+    }
+    
+    func subscribe() {
+        viewModel.$roomModel
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] roomModel in
+                guard let self = self else { return }
+                self.saveButton.isEnabled = (roomModel.price != nil && roomModel.photo != nil && roomModel.bed.checkValidation() && roomModel.size.checkValidation() && roomModel.type.checkValidation())
+            }
+            .store(in: &cancellables)
     }
     
     @IBAction func choosePhoto(_ sender: UIButton) {
@@ -95,9 +115,23 @@ extension RoomFormViewController: UITextFieldDelegate {
 
 extension RoomFormViewController: PriceTextFielddDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField == priceTextField {
+        switch textField {
+        case priceTextField:
             viewModel.roomModel.price = priceTextField.formatNumber()
+        case roomTypeTextField:
+            viewModel.roomModel.type = textField.text
+        case roomSizeTextField:
+            viewModel.roomModel.size = textField.text
+        case bedTextField:
+            viewModel.roomModel.bed = textField.text
+        default:
+            break
         }
+//        if textField == priceTextField {
+//            viewModel.roomModel.price = priceTextField.formatNumber()
+//        } else if {
+//            
+//        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

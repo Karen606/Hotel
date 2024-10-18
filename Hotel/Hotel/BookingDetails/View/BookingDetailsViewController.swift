@@ -11,6 +11,8 @@ class BookingDetailsViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imageBgView: ShadowView!
     @IBOutlet weak var dateView: BottomRoundedView!
@@ -33,6 +35,8 @@ class BookingDetailsViewController: UIViewController {
         self.setNavigationBar(title: "Bookings")
         titleLabels.forEach({ $0.font = .interRegular(size: 14) })
         dateLabel.font = .seversMedium(size: 14)
+        typeLabel.font = .seversDemiBold(size: 12)
+        sizeLabel.font = .seversMedium(size: 10)
         bgView.layer.borderWidth = 1
         bgView.layer.borderColor = #colorLiteral(red: 0.6887677908, green: 0.6887677312, blue: 0.6887677312, alpha: 1).cgColor
         bgView.layer.cornerRadius = 20
@@ -44,6 +48,8 @@ class BookingDetailsViewController: UIViewController {
         if let data = booking.photo {
             self.photoImageView.image = UIImage(data: data)
         }
+        self.typeLabel.text = bookingModel?.roomType
+        self.sizeLabel.text = "\(bookingModel?.roomSize ?? "0")m², \(bookingModel?.roomBed ?? "")"
         startDateTextField.text = booking.startDate?.toString()
         endDateTextField.text = booking.endDate?.toString()
         guestNumberTextField.text = booking.numberOfGuests

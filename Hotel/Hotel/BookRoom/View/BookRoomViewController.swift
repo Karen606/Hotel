@@ -23,6 +23,8 @@ class BookRoomViewController: UIViewController {
     @IBOutlet var titleLabels: [UILabel]!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var priceNightLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var imageViewBottomConst: NSLayoutConstraint!
     @IBOutlet weak var labelConst: NSLayoutConstraint!
     @IBOutlet weak var toBookButton: BaseButton!
@@ -47,6 +49,8 @@ class BookRoomViewController: UIViewController {
         toBookButton.titleLabel?.font = .interMedium(size: 20)
         priceLabel.font = .seversMedium(size: 22)
         infoLabel.font = .seversMedium(size: 12)
+        typeLabel.font = .seversDemiBold(size: 12)
+        sizeLabel.font = .seversMedium(size: 10)
         startDateTextField.setupRightViewIcon(UIImage.dateArrow)
         startDateTextField.setupLeftViewIcon(UIImage.calendar)
         endDateTextField.setupRightViewIcon(UIImage.dateArrow)
@@ -76,10 +80,11 @@ class BookRoomViewController: UIViewController {
                     self.roomImageView.image = UIImage(data: data)
                 }
                 self.priceLabel.text = "\(room.price?.formattedToString() ?? "")$"
-                
+                self.typeLabel.text = room.type
+                self.sizeLabel.text = "\(room.size ?? "0")m², \(room.bed ?? "")"
+
                 let priceText = "price per night "
                 let priceValue = "\(room.price?.formattedToString() ?? "")$"
-
                 let priceTextAttributes: [NSAttributedString.Key: Any] = [
                     .font: UIFont.seversMedium(size: 18) as Any
                 ]

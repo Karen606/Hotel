@@ -9,7 +9,7 @@ import Foundation
 
 class RoomFormViewModel {
     static let shared = RoomFormViewModel()
-    var roomModel = RoomModel(id: UUID())
+    @Published var roomModel = RoomModel(id: UUID())
     private init() {}
     
     func saveRoom(completion: @escaping (Error?) -> Void) {

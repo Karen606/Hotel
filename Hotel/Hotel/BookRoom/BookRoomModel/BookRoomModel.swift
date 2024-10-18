@@ -18,4 +18,7 @@ struct BookRoomModel {
     var surname: String?
     var email: String?
     var phoneNumber: String?
+    var roomType: String?
+    var roomSize: String?
+    var roomBed: String?
 }
