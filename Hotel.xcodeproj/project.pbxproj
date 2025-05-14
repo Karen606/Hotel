@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0DE74304ACE82CB10AFEA4F2 /* Pods_Hotel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D36D7477B5E93D22244F8B /* Pods_Hotel.framework */; };
+		6B2654292DD48DC500F2C6F4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2654282DD48DC500F2C6F4 /* RootViewController.swift */; };
 		6B59DB9C2CBDEBBD00B3992A /* BookingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59DB9B2CBDEBBD00B3992A /* BookingsViewModel.swift */; };
 		6B719C672CBC7FB800F10E39 /* RoomFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B719C662CBC7FB800F10E39 /* RoomFormViewModel.swift */; };
 		6B719C692CBC80D500F10E39 /* PriceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B719C682CBC80D500F10E39 /* PriceTextField.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B2654282DD48DC500F2C6F4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		6B59DB9B2CBDEBBD00B3992A /* BookingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsViewModel.swift; sourceTree = "<group>"; };
 		6B719C662CBC7FB800F10E39 /* RoomFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFormViewModel.swift; sourceTree = "<group>"; };
 		6B719C682CBC80D500F10E39 /* PriceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextField.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		6B98895C2CB9F3D9001CDCE0 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				6B2654282DD48DC500F2C6F4 /* RootViewController.swift */,
 				6B8C53EC2CB9BEC4002557E3 /* MenuViewController.swift */,
 				6B8C53EE2CB9BEC4002557E3 /* Menu.storyboard */,
 			);
@@ -486,7 +489,6 @@
 				};
 			};
 			buildConfigurationList = 6B8C53E02CB9BEC4002557E3 /* Build configuration list for PBXProject "Hotel" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -494,6 +496,7 @@
 				Base,
 			);
 			mainGroup = 6B8C53DC2CB9BEC4002557E3;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 6B8C53E62CB9BEC4002557E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -563,9 +566,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Hotel/Pods-Hotel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Hotel/Pods-Hotel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -589,6 +596,7 @@
 				6B98897E2CBC2F72001CDCE0 /* RoomsViewController.swift in Sources */,
 				6B719C672CBC7FB800F10E39 /* RoomFormViewModel.swift in Sources */,
 				6BA9C38B2CBDE6EB00C16DC1 /* BookingsViewController.swift in Sources */,
+				6B2654292DD48DC500F2C6F4 /* RootViewController.swift in Sources */,
 				6B8C53ED2CB9BEC4002557E3 /* MenuViewController.swift in Sources */,
 				6B8C53E92CB9BEC4002557E3 /* AppDelegate.swift in Sources */,
 				6B98896B2CB9F7C5001CDCE0 /* BaseTextField.swift in Sources */,
@@ -768,8 +776,8 @@
 				DEVELOPMENT_TEAM = 9YUSQBCAX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hotel/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to choose photos.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to take photos of room.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library so you can select a room photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Menu;
@@ -781,9 +789,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Karen.Hotel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -798,8 +808,8 @@
 				DEVELOPMENT_TEAM = 9YUSQBCAX9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hotel/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to take photos.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to choose photos.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to take photos of room.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library so you can select a room photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Menu;
@@ -811,9 +821,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Karen.Hotel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
